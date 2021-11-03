@@ -1,0 +1,14 @@
+{
+  "type": "sqlite",
+  "database": "./src/db/sws.sqlite3",
+  "synchronize": false,
+  "logging": true,
+  "entities": ["./dist/entities/**/*.js"],
+  "migrations": ["./dist/migrations/**/*.js"],
+  "subscribers": ["./dist/subscribers/**/*.js"],
+  "cli": {
+    "entitiesDir": "src/entities",
+    "migrationsDir": "src/migrations",
+    "subscribersDir": "src/subscribers"
+  }
+}
