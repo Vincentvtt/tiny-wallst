@@ -1,5 +1,4 @@
 import {
-  BaseEntity,
   Column,
   Entity,
   PrimaryColumn,
@@ -7,7 +6,7 @@ import {
 } from "typeorm";
 
 @Entity("swsCompanyPriceClose")
-export class SwsCompanyPriceClose extends BaseEntity {
+export class SwsCompanyPriceClose {
   @PrimaryColumn({ nullable: false })
   date: Date;
 

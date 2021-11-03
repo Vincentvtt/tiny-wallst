@@ -1,8 +1,8 @@
-import { BaseEntity, Column, Entity, OneToOne, PrimaryColumn } from "typeorm";
+import { Column, Entity, OneToOne, PrimaryColumn } from "typeorm";
 import SwsCompany from "./SwsCompany";
 
 @Entity("swsCompanyScore")
-export class SwsCompanyScore extends BaseEntity {
+export class SwsCompanyScore {
   @PrimaryColumn({ nullable: false })
   id: number;
 

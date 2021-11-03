@@ -1,5 +1,4 @@
 import {
-  BaseEntity,
   Column,
   Entity,
   JoinColumn,
@@ -9,7 +8,7 @@ import {
 import SwsCompanyScore from "./SwsCompanyScore";
 
 @Entity("swsCompany")
-export class SwsCompany extends BaseEntity {
+export class SwsCompany {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
