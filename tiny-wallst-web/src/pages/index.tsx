@@ -1,27 +1,29 @@
-import { Container } from "@chakra-ui/layout";
-import React, { useEffect, useState } from "react";
+import { Container } from "@chakra-ui/react";
+import React from "react";
 import http from "../api/http";
-import { Company } from "../types/company";
+import CompanyTable from "../components/CompanyTable";
+import { NavBar } from "../components/NavBar";
+import { HomeProps } from "../types/home-props";
 
-const Index = () => {
-  const [companies, setCompanies] = useState([] as Company[]);
-
-  useEffect(() => {
-    http.get("/companies").then((res) => {
-      setCompanies(res.data);
-    });
-  }, []);
-
-  console.log(companies);
+const Home = ({ companies }: HomeProps) => {
+  const data = React.useMemo(() => companies, []);
   return (
-    <Container height="100vh">
-      {companies.length > 0
-        ? companies.map((company) => {
-            return <li key={company.id}>{company.name}</li>;
-          })
-        : null}
+    <Container maxW="container.xl" vh={100}>
+      <NavBar />
+      <CompanyTable data={data} />
     </Container>
   );
 };
 
-export default Index;
+export async function getStaticProps() {
+  const res = await http.get("/companies");
+  const companies = await res.data;
+
+  return {
+    props: {
+      companies,
+    },
+  };
+}
+
+export default Home;

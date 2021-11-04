@@ -38,7 +38,7 @@ export async function getAllCompaniesWithPriceAndScore(
       const minPrice = priceCloses.reduce((pc1, pc2) =>
         pc1.price < pc2.price ? pc1 : pc2
       ).price;
-      const maxPriceFluctuation = maxPrice - minPrice;
+      const maxPriceFluctuation = parseFloat((maxPrice - minPrice).toFixed(2));
       delete company.priceCloses;
       return {
         ...company,

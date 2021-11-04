@@ -1,19 +1,47 @@
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
+import { Box, Center, Flex, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 import React from "react";
-import { useTable, useSortBy } from "react-table";
+import { useSortBy, useTable } from "react-table";
 
-import {
-  ChakraProvider,
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  Flex,
-} from "@chakra-ui/react";
-import { ChevronUpIcon, ChevronDownIcon } from "@chakra-ui/icons";
+function CompanyTable({ data }: any): JSX.Element {
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "Companies",
+        columns: [
+          {
+            Header: "Name",
+            accessor: "name",
+          },
+          {
+            Header: "Symbol",
+            accessor: "unique_symbol",
+          },
+          {
+            Header: "Exchange",
+            accessor: "exchange_symbol",
+          },
+          {
+            Header: "Last Price ($)",
+            accessor: "last_known_price",
+          },
+          {
+            Header: "Max Price Fluctuation (last 90 days)",
+            accessor: "max_price_fluctuation",
+          },
+          {
+            Header: "Overall Score",
+            accessor: "score.total",
+          },
+          {
+            Header: "Snowflake Score",
+          },
+        ],
+      },
+    ],
+    []
+  );
 
-function CustomTable({ columns, data }: any) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable(
       {
@@ -23,8 +51,6 @@ function CustomTable({ columns, data }: any) {
       useSortBy
     );
 
-  // We don't want to render all 2000 rows for this example, so cap
-  // it at 20 for this use case
   const firstPageRows = rows.slice(0, 20);
 
   return (
@@ -34,15 +60,12 @@ function CustomTable({ columns, data }: any) {
           {headerGroups.map((headerGroup) => (
             <Tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                // Add the sorting props to control sorting. For this example
-                // we can add them into the header props
                 <Th
                   userSelect="none"
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                 >
                   <Flex alignItems="center">
                     {column.render("Header")}
-                    {/* Add a sort direction indicator */}
                     {column.isSorted ? (
                       column.isSortedDesc ? (
                         <ChevronDownIcon ml={1} w={4} h={4} />
@@ -74,59 +97,11 @@ function CustomTable({ columns, data }: any) {
         </Tbody>
       </Table>
       <br />
-      <div>Showing the first 20 results of {rows.length} rows</div>
+      <Center>
+        Showing the first {firstPageRows.length} of {rows.length} rows
+      </Center>
     </>
   );
 }
 
-function App() {
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: "Name",
-        columns: [
-          {
-            Header: "First Name",
-            accessor: "firstName",
-          },
-          {
-            Header: "Last Name",
-            accessor: "lastName",
-          },
-        ],
-      },
-      {
-        Header: "Info",
-        columns: [
-          {
-            Header: "Age",
-            accessor: "age",
-          },
-          {
-            Header: "Visits",
-            accessor: "visits",
-          },
-          {
-            Header: "Status",
-            accessor: "status",
-          },
-          {
-            Header: "Profile Progress",
-            accessor: "progress",
-          },
-        ],
-      },
-    ],
-    []
-  );
-
-  const data = React.useMemo(() => companyData, []);
-
-  return (
-    <ChakraProvider>
-      <CustomTable columns={columns} data={data} />
-    </ChakraProvider>
-  );
-}
-
-export default Table;
+export default CompanyTable;
