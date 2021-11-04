@@ -6,7 +6,7 @@ export class SwsCompanyScore {
   @PrimaryColumn({ nullable: false })
   id: number;
 
-  @OneToOne(() => SwsCompany, swsCompany => swsCompany.id)
+  @OneToOne(() => SwsCompany, (swsCompany) => swsCompany.id)
   company: SwsCompany;
 
   @Column({ nullable: false })

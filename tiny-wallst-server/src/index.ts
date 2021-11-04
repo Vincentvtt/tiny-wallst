@@ -3,7 +3,7 @@ import { createConnection } from "typeorm";
 import * as Koa from "koa";
 import * as Router from "koa-router";
 import * as bodyParser from "koa-bodyparser";
-import { Routes } from "./routes";
+import { CompanyRoutes } from "./routes/company-routes";
 import * as cors from "@koa/cors";
 
 createConnection()
@@ -11,7 +11,9 @@ createConnection()
     const app = new Koa();
     const router = new Router();
 
-    Routes.forEach((route) => router[route.method](route.path, route.action));
+    CompanyRoutes.forEach((route) =>
+      router[route.method](route.path, route.action)
+    );
 
     app.use(
       cors({

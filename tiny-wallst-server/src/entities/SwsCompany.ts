@@ -2,10 +2,12 @@ import {
   Column,
   Entity,
   JoinColumn,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
 import SwsCompanyScore from "./SwsCompanyScore";
+import { SwsCompanyPriceClose } from "./SwsCompanyPriceClose";
 
 @Entity("swsCompany")
 export class SwsCompany {
@@ -42,9 +44,17 @@ export class SwsCompany {
   @Column()
   unique_symbol_slug: string;
 
-  @OneToOne(() => SwsCompanyScore, (swsCompanyScore) => swsCompanyScore.id)
+  @OneToOne(() => SwsCompanyScore, (swsCompanyScore) => swsCompanyScore.id, {
+    eager: true,
+  })
   @JoinColumn({ name: "score_id" })
-  score_id: SwsCompanyScore;
+  score: SwsCompanyScore;
+
+  @OneToMany(
+    () => SwsCompanyPriceClose,
+    (swsCompanyPriceClose) => swsCompanyPriceClose.company_id
+  )
+  priceCloses: SwsCompanyPriceClose[];
 }
 
 export default SwsCompany;
