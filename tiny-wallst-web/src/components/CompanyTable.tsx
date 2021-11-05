@@ -45,28 +45,19 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
           {
             Header: "Last Price ($)",
             accessor: "last_known_price",
-            Cell: (cellContent: { value: string }) => (
-              <Center>{cellContent.value}</Center>
-            ),
           },
           {
             Header: "Volatility (last 90 days)",
             accessor: "max_price_fluctuation",
-            Cell: (cellContent: { value: string }) => (
-              <Center>{cellContent.value}</Center>
-            ),
           },
           {
             Header: "Overall Score",
             accessor: "score.total",
             Filter: NumberRangeColumnFilter,
             filter: "between",
-            Cell: (cellContent: { value: string }) => (
-              <Center>{cellContent.value}</Center>
-            ),
           },
           {
-            Header: "Snowflake Score",
+            Header: "Score",
             accessor: "score",
             Cell: ({ value }: { value: Score }) => (
               <RadarChart
@@ -114,14 +105,25 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
       </Flex>
       <Table {...getTableProps()}>
         <Thead>
-          {headerGroups.map((headerGroup) => (
-            <Tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
+          {headerGroups.map((headerGroup, rowIdx) => (
+            <Tr
+              {...headerGroup.getHeaderGroupProps()}
+              key={rowIdx}
+              backgroundColor={rowIdx == 1 ? "#D3D3D3" : "white"}
+            >
+              {headerGroup.headers.map((column, idx) => (
                 <Th
                   userSelect="none"
                   {...column.getHeaderProps(column.getSortByToggleProps())}
+                  key={idx}
+                  fontSize={rowIdx == 0 && idx == 0 ? "1.5em" : "0.75em"}
                 >
-                  <Flex alignItems="center">
+                  <Flex
+                    alignItems="center"
+                    justifyContent="center"
+                    textAlign="center"
+                    mt={rowIdx == 0 && idx == 0 ? "-1em" : "0"}
+                  >
                     {column.render("Header")}
                     {column.isSorted ? (
                       column.isSortedDesc ? (
@@ -139,13 +141,15 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
           ))}
         </Thead>
         <Tbody {...getTableBodyProps()}>
-          {firstPageRows.map((row, i) => {
+          {firstPageRows.map((row, idx) => {
             prepareRow(row);
             return (
-              <Tr {...row.getRowProps()}>
-                {row.cells.map((cell) => {
+              <Tr {...row.getRowProps()} key={idx}>
+                {row.cells.map((cell, idx) => {
                   return (
-                    <Td {...cell.getCellProps()}>{cell.render("Cell")}</Td>
+                    <Td {...cell.getCellProps()} key={idx} textAlign="center">
+                      {cell.render("Cell")}
+                    </Td>
                   );
                 })}
               </Tr>
@@ -154,7 +158,7 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
         </Tbody>
       </Table>
       <br />
-      <Center>
+      <Center pb={4}>
         Showing the first {firstPageRows.length} of {rows.length} rows
       </Center>
     </>

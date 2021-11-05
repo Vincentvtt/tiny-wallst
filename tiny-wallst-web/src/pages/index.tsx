@@ -6,7 +6,7 @@ import { NavBar } from "../components/NavBar";
 import { HomeProps } from "../types/home-props";
 
 const Home = ({ companies }: HomeProps) => {
-  const data = React.useMemo(() => companies, []);
+  const data = React.useMemo(() => companies, [companies]);
   return (
     <>
       <NavBar />

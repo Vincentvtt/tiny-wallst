@@ -7,3 +7,4 @@ Features that could be added:
 - More robust testing
 - Monitoring/Logging
 - Better styling/ui/responsiveness
+- Patch 3 medium vulnerabilities

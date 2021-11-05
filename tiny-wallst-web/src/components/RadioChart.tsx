@@ -1,3 +1,5 @@
+import { Box } from "@chakra-ui/layout";
+import React from "react";
 import { Radar } from "react-chartjs-2";
 
 interface RadarChartProps {
@@ -11,24 +13,33 @@ interface RadarChartProps {
 const LABELS = ["value", "future", "past", "health", "dividend"];
 
 const OPTIONS = {
-  scale: {
-    ticks: {
-      min: 0,
-      max: 16,
-      stepSize: 2,
-      showLabelBackdrop: false,
-      backdropColor: "rgba(203, 197, 11, 1)",
-    },
-    angleLines: {
-      color: "rgba(255, 255, 255, .3)",
-      lineWidth: 1,
-    },
-    gridLines: {
-      color: "rgba(255, 255, 255, .3)",
-      circular: true,
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    r: {
+      ticks: {
+        min: 0,
+        max: 10,
+        stepSize: 1,
+        showLabelBackdrop: false,
+        backdropColor: "rgba(203, 197, 11, 1)",
+      },
+      angleLines: {
+        color: "rgba(255, 255, 255, .3)",
+        lineWidth: 1,
+      },
+      gridLines: {
+        color: "rgba(255, 255, 255, .3)",
+        circular: true,
+      },
     },
   },
-} as const;
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
+};
 
 export const RadarChart = ({
   value,
@@ -41,7 +52,7 @@ export const RadarChart = ({
     labels: LABELS,
     datasets: [
       {
-        label: "Snowflake",
+        label: "Score",
         backgroundColor: "rgba(34, 202, 236, .2)",
         borderColor: "rgba(34, 202, 236, 1)",
         pointBackgroundColor: "rgba(34, 202, 236, 1)",
@@ -53,7 +64,11 @@ export const RadarChart = ({
     ],
   };
 
-  return <Radar data={data} options={OPTIONS} />;
+  return (
+    <Box>
+      <Radar data={data} options={OPTIONS} />
+    </Box>
+  );
 };
 
 export default RadarChart;

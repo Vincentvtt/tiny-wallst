@@ -6,10 +6,10 @@ interface NavBarProps {}
 export const NavBar: React.FC<NavBarProps> = ({}) => {
   return (
     <Box bg="#333333" color="white" p={8}>
-      <Center>
-        <Img src="/images/favicon.png" alt="simply wall street logo" mr={4}/>
+      <Box textAlign="left" fontSize="1.25em">
+        <Img float="left" src="/images/favicon.png" alt="simply wall street logo" mr={4}/>
         Tiny Wall Street
-      </Center>
+      </Box>
     </Box>
   );
 };
