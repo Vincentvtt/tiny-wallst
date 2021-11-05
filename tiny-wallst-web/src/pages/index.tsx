@@ -8,10 +8,12 @@ import { HomeProps } from "../types/home-props";
 const Home = ({ companies }: HomeProps) => {
   const data = React.useMemo(() => companies, []);
   return (
-    <Container maxW="container.xl" vh={100}>
+    <>
       <NavBar />
-      <CompanyTable data={data} />
-    </Container>
+      <Container maxW="container.xl" vh={90}>
+        <CompanyTable data={data} />
+      </Container>
+    </>
   );
 };
 

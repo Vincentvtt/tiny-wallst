@@ -5,6 +5,8 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head />
+        <title>Tiny Wall Street</title>
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
         <body>
           <Main />
           <NextScript />

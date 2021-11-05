@@ -5,5 +5,5 @@ Features that could be added:
 - Sorting (server side)
 - Core web vitals
 - More robust testing
-- Monitoring
-- Better styling/ui
+- Monitoring/Logging
+- Better styling/ui/responsiveness

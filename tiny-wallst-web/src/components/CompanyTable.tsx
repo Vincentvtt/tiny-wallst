@@ -1,13 +1,32 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import { Box, Center, Flex, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Flex,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/react";
 import React from "react";
-import { useSortBy, useTable } from "react-table";
+import { useSortBy, useTable, useFilters } from "react-table";
+import { Company } from "../types/company";
+import { NumberRangeColumnFilter } from "./table-filters/NumberRangeColumnFilter";
+import { SelectColumnFilter } from "./table-filters/SelectColumnFilter";
+import { RadarChart } from "./RadioChart";
+import Score from "../types/score";
 
-function CompanyTable({ data }: any): JSX.Element {
+interface CompanyTableProps {
+  data: Company[];
+}
+
+function CompanyTable({ data }: CompanyTableProps): JSX.Element {
   const columns = React.useMemo(
     () => [
       {
-        Header: "Companies",
+        Header: "Company Overview",
         columns: [
           {
             Header: "Name",
@@ -20,21 +39,44 @@ function CompanyTable({ data }: any): JSX.Element {
           {
             Header: "Exchange",
             accessor: "exchange_symbol",
+            Filter: SelectColumnFilter,
+            filter: "includes",
           },
           {
             Header: "Last Price ($)",
             accessor: "last_known_price",
+            Cell: (cellContent: { value: string }) => (
+              <Center>{cellContent.value}</Center>
+            ),
           },
           {
-            Header: "Max Price Fluctuation (last 90 days)",
+            Header: "Volatility (last 90 days)",
             accessor: "max_price_fluctuation",
+            Cell: (cellContent: { value: string }) => (
+              <Center>{cellContent.value}</Center>
+            ),
           },
           {
             Header: "Overall Score",
             accessor: "score.total",
+            Filter: NumberRangeColumnFilter,
+            filter: "between",
+            Cell: (cellContent: { value: string }) => (
+              <Center>{cellContent.value}</Center>
+            ),
           },
           {
             Header: "Snowflake Score",
+            accessor: "score",
+            Cell: ({ value }: { value: Score }) => (
+              <RadarChart
+                value={value.value}
+                future={value.future}
+                past={value.past}
+                health={value.health}
+                dividend={value.dividend}
+              />
+            ),
           },
         ],
       },
@@ -48,6 +90,7 @@ function CompanyTable({ data }: any): JSX.Element {
         columns,
         data,
       },
+      useFilters,
       useSortBy
     );
 
@@ -55,6 +98,20 @@ function CompanyTable({ data }: any): JSX.Element {
 
   return (
     <>
+      <Flex>
+        <Box ml={"auto"} mt={4}>
+          {headerGroups.map((headerGroup) =>
+            headerGroup.headers.map((column) =>
+              column.Filter ? (
+                <Box key={column.id} float="left" ml={4} mb={-5}>
+                  <label htmlFor={column.id}>{column.render("Header")}: </label>
+                  {column.render("Filter")}
+                </Box>
+              ) : null
+            )
+          )}
+        </Box>
+      </Flex>
       <Table {...getTableProps()}>
         <Thead>
           {headerGroups.map((headerGroup) => (
