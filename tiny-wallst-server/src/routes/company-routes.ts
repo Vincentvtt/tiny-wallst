@@ -3,10 +3,10 @@ import { getAllCompaniesWithPriceAndScore } from "../controllers/company-control
 export interface Routes {
   path: string;
   method: string;
-  action: Function
+  action: Function;
 }
 
-export const CompanyRoutes = [
+export const CompanyRoutes: Routes[] = [
   {
     path: "/companies",
     method: "get",

@@ -17,7 +17,7 @@ export async function getAllCompaniesWithPriceAndScore(
     .subtract(90, "day")
     .format("YYYY-MM-DD");
 
-  const allCompaniesWithAllPriceCloses = await getRepository(SwsCompany)
+  const allCompaniesWithAllPriceCloses: SwsCompany[] = await getRepository(SwsCompany)
     .createQueryBuilder("swsCompany")
     .leftJoinAndSelect("swsCompany.score", "score")
     .leftJoinAndSelect("swsCompany.priceCloses", "priceCloses")
@@ -28,8 +28,8 @@ export async function getAllCompaniesWithPriceAndScore(
     .orderBy("priceCloses.date", "DESC")
     .getMany();
 
-  const allCompaniesWithPriceAndScore = allCompaniesWithAllPriceCloses.map(
-    (company) => {
+  const allCompaniesWithPriceAndScore: CompanyWithPriceAndScore[] =
+    allCompaniesWithAllPriceCloses.map((company) => {
       const priceCloses = company.priceCloses;
       const lastKnownPrice = priceCloses[0].price;
       const maxPrice = priceCloses.reduce((pc1, pc2) =>
@@ -45,8 +45,7 @@ export async function getAllCompaniesWithPriceAndScore(
         last_known_price: lastKnownPrice,
         max_price_fluctuation: maxPriceFluctuation,
       };
-    }
-  );
+    });
 
   return (context.body = allCompaniesWithPriceAndScore);
 }

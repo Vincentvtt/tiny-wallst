@@ -1,6 +1,6 @@
-import 'reflect-metadata';
-import { createConnection, Connection } from 'typeorm';
+import "reflect-metadata";
+import { createConnection, Connection } from "typeorm";
 
-const connection:Promise<Connection> = createConnection();
+const databaseConnection: Promise<Connection> = createConnection();
 
-export default connection;
+export default databaseConnection;

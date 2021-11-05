@@ -41,9 +41,7 @@
     "moduleFileExtensions": [
       "js",
       "jsx",
-      "json",
-      "ts",
-      "tsx"
+      "json"
     ],
     "collectCoverage": true,
     "collectCoverageFrom": [

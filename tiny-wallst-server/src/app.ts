@@ -4,12 +4,23 @@ import * as bodyParser from "koa-bodyparser";
 import { CompanyRoutes, Routes } from "./routes/company-routes";
 import * as cors from "@koa/cors";
 
-const app: Koa = new Koa();
-const router: Router = new Router();
+const app = new Koa();
+const router = new Router();
 
 CompanyRoutes.forEach((route: Routes) =>
   router[route.method](route.path, route.action)
 );
+
+app.use(async (ctx, next) => {
+  try {
+    await next();
+  } catch (err) {
+    ctx.status = err.statusCode || err.status || 500;
+    ctx.body = {
+      message: err.message,
+    };
+  }
+});
 
 app.use(
   cors({
