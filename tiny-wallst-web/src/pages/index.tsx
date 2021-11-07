@@ -8,7 +8,7 @@ interface AppProps {
   companies: Company[];
 }
 
-const Home = ({ companies }: AppProps) => {
+const App = ({ companies }: AppProps) => {
   const data = React.useMemo(() => companies, [companies]);
   return (
     <Layout>
@@ -35,4 +35,4 @@ export async function getStaticProps() {
   }
 }
 
-export default Home;
+export default App;

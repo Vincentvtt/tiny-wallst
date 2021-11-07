@@ -1,6 +1,6 @@
 export interface Score {
   id: number;
-  date_generated: Date;
+  date_generated: string;
   dividend: number;
   future: number;
   health: number;

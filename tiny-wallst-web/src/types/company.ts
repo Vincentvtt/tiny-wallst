@@ -6,7 +6,7 @@ export interface Company {
   ticker_symbol: string;
   exchange_symbol: string;
   unique_symbol: string;
-  date_generated: Date;
+  date_generated: string;
   security_name: string;
   exchange_country_iso: string;
   listing_currency_iso: string;

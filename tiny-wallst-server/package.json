@@ -7,7 +7,7 @@
     "watch": "tsc -w",
     "dev": "nodemon dist/server.js",
     "start": "tsc && node dist/server.js",
-    "test": "jest"
+    "test": "jest -u"
   },
   "keywords": [],
   "author": "",

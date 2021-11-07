@@ -1,0 +1,2371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index page renders homepage unchanged 1`] = `
+Array [
+  <div
+    className="css-1kjgm59"
+  >
+    <div
+      className="css-idgqqe"
+    >
+      <img
+        alt="simply wall street logo"
+        className="chakra-image css-ilyae6"
+        src="/images/favicon.png"
+      />
+      Tiny Wall Street
+    </div>
+  </div>,
+  <div
+    className="chakra-container css-1wzs6qk"
+  >
+    <h4
+      className="chakra-heading css-1oinow6"
+    >
+      Company Overview
+    </h4>
+    <div
+      className="css-k008qs"
+    >
+      <div
+        className="css-1c2m06k"
+      >
+        <div
+          className="css-h32ry8"
+        >
+          <span
+            className="css-15fzge"
+          >
+            <label
+              htmlFor="exchange_symbol"
+            >
+              Exchange
+              :
+               
+            </label>
+          </span>
+          <span
+            className="css-14gt3bc"
+          >
+            <select
+              id="exchange_symbol"
+              name="exchange_symbol"
+              onChange={[Function]}
+            >
+              <option
+                value=""
+              >
+                All
+              </option>
+            </select>
+          </span>
+        </div>
+        <div
+          className="css-h32ry8"
+        >
+          <span
+            className="css-15fzge"
+          >
+            <label
+              htmlFor="score.total"
+            >
+              Overall Score
+              :
+               
+            </label>
+          </span>
+          <span
+            className="css-14gt3bc"
+          >
+            <span
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <input
+                onChange={[Function]}
+                placeholder="Min (0)"
+                style={
+                  Object {
+                    "marginRight": "0.5rem",
+                    "width": "70px",
+                  }
+                }
+                type="number"
+                value=""
+              />
+              to
+              <input
+                onChange={[Function]}
+                placeholder="Max (0)"
+                style={
+                  Object {
+                    "marginLeft": "0.5rem",
+                    "width": "70px",
+                  }
+                }
+                type="number"
+                value=""
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <table
+      className="chakra-table css-0"
+      role="table"
+      style={
+        Object {
+          "minWidth": "450px",
+        }
+      }
+    >
+      <thead
+        className="css-0"
+      >
+        <tr
+          className="css-1p9yj9a"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Name
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Symbol
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Exchange
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Last Price
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Volatility (last 90 days)
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Overall Score
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": undefined,
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Rating
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="css-0"
+        role="rowgroup"
+      />
+    </table>
+    <br />
+    <div
+      className="css-1h2u282"
+    >
+      Showing the first 
+      0
+       of 
+      0
+       rows
+    </div>
+  </div>,
+  <div
+    className="css-1w7unbo"
+  >
+    <div
+      className="css-1m0ex25"
+    >
+      © Vincent Tsai
+    </div>
+  </div>,
+]
+`;
+
+exports[`Index page renders homepage with all companies 1`] = `
+Array [
+  <div
+    className="css-1kjgm59"
+  >
+    <div
+      className="css-idgqqe"
+    >
+      <img
+        alt="simply wall street logo"
+        className="chakra-image css-ilyae6"
+        src="/images/favicon.png"
+      />
+      Tiny Wall Street
+    </div>
+  </div>,
+  <div
+    className="chakra-container css-1wzs6qk"
+  >
+    <h4
+      className="chakra-heading css-1oinow6"
+    >
+      Company Overview
+    </h4>
+    <div
+      className="css-k008qs"
+    >
+      <div
+        className="css-1c2m06k"
+      >
+        <div
+          className="css-h32ry8"
+        >
+          <span
+            className="css-15fzge"
+          >
+            <label
+              htmlFor="exchange_symbol"
+            >
+              Exchange
+              :
+               
+            </label>
+          </span>
+          <span
+            className="css-14gt3bc"
+          >
+            <select
+              id="exchange_symbol"
+              name="exchange_symbol"
+              onChange={[Function]}
+            >
+              <option
+                value=""
+              >
+                All
+              </option>
+              <option
+                value="ASX"
+              >
+                ASX
+              </option>
+              <option
+                value="NasdaqGS"
+              >
+                NasdaqGS
+              </option>
+              <option
+                value="NYSE"
+              >
+                NYSE
+              </option>
+            </select>
+          </span>
+        </div>
+        <div
+          className="css-h32ry8"
+        >
+          <span
+            className="css-15fzge"
+          >
+            <label
+              htmlFor="score.total"
+            >
+              Overall Score
+              :
+               
+            </label>
+          </span>
+          <span
+            className="css-14gt3bc"
+          >
+            <span
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <input
+                onChange={[Function]}
+                placeholder="Min (8)"
+                style={
+                  Object {
+                    "marginRight": "0.5rem",
+                    "width": "70px",
+                  }
+                }
+                type="number"
+                value=""
+              />
+              to
+              <input
+                onChange={[Function]}
+                placeholder="Max (20)"
+                style={
+                  Object {
+                    "marginLeft": "0.5rem",
+                    "width": "70px",
+                  }
+                }
+                type="number"
+                value=""
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <table
+      className="chakra-table css-0"
+      role="table"
+      style={
+        Object {
+          "minWidth": "450px",
+        }
+      }
+    >
+      <thead
+        className="css-0"
+      >
+        <tr
+          className="css-1p9yj9a"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Name
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Symbol
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Exchange
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Last Price
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Volatility (last 90 days)
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            onClick={[Function]}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": "pointer",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+            title="Toggle SortBy"
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Overall Score
+              <svg
+                className="chakra-icon css-owobpc"
+                focusable={false}
+                viewBox="-1 -1 9 11"
+              >
+                <path
+                  d="M 3.5 0L 3.98809 -0.569442L 3.5 -0.987808L 3.01191 -0.569442L 3.5 0ZM 3.5 9L 3.01191 9.56944L 3.5 9.98781L 3.98809 9.56944L 3.5 9ZM 0.488094 3.56944L 3.98809 0.569442L 3.01191 -0.569442L -0.488094 2.43056L 0.488094 3.56944ZM 3.01191 0.569442L 6.51191 3.56944L 7.48809 2.43056L 3.98809 -0.569442L 3.01191 0.569442ZM -0.488094 6.56944L 3.01191 9.56944L 3.98809 8.43056L 0.488094 5.43056L -0.488094 6.56944ZM 3.98809 9.56944L 7.48809 6.56944L 6.51191 5.43056L 3.01191 8.43056L 3.98809 9.56944Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            className="css-1e9mjtk"
+            colSpan={1}
+            role="columnheader"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "cursor": undefined,
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-1od6a13"
+            >
+              Rating
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="css-0"
+        role="rowgroup"
+      >
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Telstra
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              TLS
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            ASX
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              3.06
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              0.06
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            10
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Amazon.com
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              AMZ
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NasdaqGS
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              2436.88
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              197.72
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            13
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Alibaba Group Holding
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              BABA
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NYSE
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              199.70
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              8.12
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            13
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Walt Disney
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              DIS
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NYSE
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              118.02
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              6.09
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            8
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Facebook
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              FB
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NasdaqGS
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              234.91
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              22.33
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            11
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Apple
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              AAPL
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NasdaqGS
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              318.89
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              23.54
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            9
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Tesla
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              TSLA
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NasdaqGS
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              816.88
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              120.82
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            11
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            BHP Group
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              BHP
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            ASX
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              34.32
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              1.43
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            12
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Delta Air Lines
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              DAL
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NYSE
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              22.69
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              2.81
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            15
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Afterpay
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              APT
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            ASX
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              44.51
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              9.10
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            9
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Microsoft
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              MSFT
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NasdaqGS
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              183.51
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              10.97
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            18
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+        <tr
+          className="css-0"
+          role="row"
+          style={
+            Object {
+              "display": "flex",
+              "flex": "1 0 auto",
+              "minWidth": "450px",
+            }
+          }
+        >
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "150px",
+                "width": "150px",
+              }
+            }
+          >
+            Pfizer
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              PFE
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            NYSE
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              37.50
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              $
+              2.29
+            </div>
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "150 0 auto",
+                "minWidth": "0px",
+                "width": "150px",
+              }
+            }
+          >
+            20
+          </td>
+          <td
+            className="css-1mbo0nd"
+            role="cell"
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "flex": "300 0 auto",
+                "minWidth": "300px",
+                "width": "300px",
+              }
+            }
+          >
+            <div
+              className="css-0"
+            >
+              <canvas
+                height={150}
+                onClick={[Function]}
+                role="img"
+                width={300}
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <div
+      className="css-1h2u282"
+    >
+      Showing the first 
+      12
+       of 
+      12
+       rows
+    </div>
+  </div>,
+  <div
+    className="css-1w7unbo"
+  >
+    <div
+      className="css-1m0ex25"
+    >
+      © Vincent Tsai
+    </div>
+  </div>,
+]
+`;

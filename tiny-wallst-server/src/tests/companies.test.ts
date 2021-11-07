@@ -25,6 +25,6 @@ describe("/companies route", () => {
     expect(response.body[0].volatility).toBeDefined;
     expect(response.body[0].last_known_price).toBeDefined;
     expect(response.body).toEqual(companies.companiesWithPriceAndVolatility);
-    expect(response.text).toMatchSnapshot();
+    expect(response.body).toMatchSnapshot();
   });
 });

@@ -1,7 +1,13 @@
 import { getRepository } from "typeorm";
 import { SwsCompany } from "../entities/SwsCompany";
 import { getDate, getDate90DaysBefore } from "../utils/date";
+import { getVolatility } from "../utils/volatility";
 import { LAST_DATE_IN_DB } from "./../constants";
+
+export interface CompanyWithPriceAndVolatility extends SwsCompany {
+  last_known_price: number;
+  volatility: number;
+}
 
 export async function getAllCompaniesWithPriceClosesAndScore(): Promise<SwsCompany[]> {
   const LAST_DATE = getDate(LAST_DATE_IN_DB);
@@ -17,4 +23,21 @@ export async function getAllCompaniesWithPriceClosesAndScore(): Promise<SwsCompa
     })
     .orderBy("priceCloses.date", "DESC")
     .getMany();
+}
+
+export async function getAllCompaniesWithPriceAndVolatility(): Promise<CompanyWithPriceAndVolatility[]> {
+  const allCompaniesWithAllPriceClosesAndScore: SwsCompany[] = await getAllCompaniesWithPriceClosesAndScore();
+
+  return allCompaniesWithAllPriceClosesAndScore.map((company) => {
+    const priceCloses = company.priceCloses;
+    const lastKnownPrice = priceCloses[0].price;
+    const prices = priceCloses.map((pc) => pc.price);
+    const volatility = getVolatility(prices);
+    delete company.priceCloses;
+    return {
+      ...company,
+      last_known_price: lastKnownPrice,
+      volatility: volatility,
+    };
+  });
 }

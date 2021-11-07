@@ -1,4 +1,4 @@
-import { getAllCompaniesWithPriceAndVolatility } from "../controllers/company-controller";
+import { getCompanies } from "../controllers/company-controller";
 
 export interface Routes {
   path: string;
@@ -10,7 +10,7 @@ export const CompanyRoutes: Routes[] = [
   {
     path: "/companies",
     method: "get",
-    action: getAllCompaniesWithPriceAndVolatility,
+    action: getCompanies,
   },
 ];
 
