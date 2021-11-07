@@ -12,7 +12,8 @@ npm start
 3. In the second terminal: 
 ```
 cd tiny-wallst-web
-npm run build // ensure that the backend server is running first
+<!-- ensure the server is running first -->
+npm run build
 npm start
 ```
 
