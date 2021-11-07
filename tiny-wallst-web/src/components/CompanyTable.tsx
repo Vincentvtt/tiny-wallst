@@ -1,4 +1,4 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, ChevronUpIcon, UpDownIcon } from "@chakra-ui/icons";
 import {
   Box,
   Center,
@@ -11,7 +11,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import React from "react";
-import { useSortBy, useTable, useFilters } from "react-table";
+import { useSortBy, useTable, useFilters, useFlexLayout } from "react-table";
 import { Company } from "../types/company";
 import { NumberRangeColumnFilter } from "./table-filters/NumberRangeColumnFilter";
 import { SelectColumnFilter } from "./table-filters/SelectColumnFilter";
@@ -31,10 +31,16 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
           {
             Header: "Name",
             accessor: "name",
+            width: 150,
+            minWidth: 150,
+            maxWidth: 150,
           },
           {
             Header: "Symbol",
             accessor: "unique_symbol",
+            Cell: ({ value }: { value: string }) => (
+              <Box>{value.split(":")[1]}</Box>
+            ),
           },
           {
             Header: "Exchange",
@@ -74,6 +80,9 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
                 dividend={value.dividend}
               />
             ),
+            width: 300,
+            minWidth: 300,
+            maxWidth: 300,
           },
         ],
       },
@@ -88,7 +97,8 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
         data,
       },
       useFilters,
-      useSortBy
+      useSortBy,
+      useFlexLayout
     );
 
   const firstPageRows = rows.slice(0, 20);
@@ -100,7 +110,7 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
           {headerGroups.map((headerGroup) =>
             headerGroup.headers.map((column) =>
               column.Filter ? (
-                <Box key={column.id} float="left" ml={4} mb={-5}>
+                <Box key={column.id} float="left" ml={4}>
                   <label htmlFor={column.id}>{column.render("Header")}: </label>
                   {column.render("Filter")}
                 </Box>
@@ -115,20 +125,19 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
             <Tr
               {...headerGroup.getHeaderGroupProps()}
               key={rowIdx}
-              backgroundColor={rowIdx == 1 ? "#D3D3D3" : "white"}
+              backgroundColor={rowIdx === 1 ? "#D3D3D3" : "white"}
             >
               {headerGroup.headers.map((column, idx) => (
                 <Th
                   userSelect="none"
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   key={idx}
-                  fontSize={rowIdx == 0 && idx == 0 ? "1.5em" : "0.75em"}
+                  fontSize={rowIdx === 0 && idx === 0 ? "1.5em" : "0.75em"}
                 >
                   <Flex
                     alignItems="center"
                     justifyContent="center"
                     textAlign="center"
-                    mt={rowIdx == 0 && idx == 0 ? "-1em" : "0"}
                   >
                     {column.render("Header")}
                     {column.isSorted ? (
@@ -138,7 +147,7 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
                         <ChevronUpIcon ml={1} w={4} h={4} />
                       )
                     ) : (
-                      ""
+                      rowIdx === 1 && <UpDownIcon ml={1} w={4} h={2} />
                     )}
                   </Flex>
                 </Th>
@@ -164,7 +173,7 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
         </Tbody>
       </Table>
       <br />
-      <Center pb={4}>
+      <Center mb="2em">
         Showing the first {firstPageRows.length} of {rows.length} rows
       </Center>
     </>

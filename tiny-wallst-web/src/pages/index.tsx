@@ -10,7 +10,7 @@ const Home = ({ companies }: HomeProps) => {
   return (
     <>
       <NavBar />
-      <Container maxW="container.xl" vh={90}>
+      <Container maxW="container.xl" vh={90} overflowX={"auto"}>
         <CompanyTable data={data} />
       </Container>
     </>
@@ -18,14 +18,20 @@ const Home = ({ companies }: HomeProps) => {
 };
 
 export async function getStaticProps() {
-  const res = await http.get("/companies");
-  const companies = await res.data;
+  try {
+    const res = await http.get("/companies");
+    const companies = await res.data;
 
-  return {
-    props: {
-      companies,
-    },
-  };
+    return {
+      props: {
+        companies,
+      },
+    };
+  } catch (err) {
+    return {
+      notFound: true,
+    };
+  }
 }
 
 export default Home;

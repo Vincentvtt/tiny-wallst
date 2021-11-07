@@ -3,7 +3,7 @@
 Built in NPM v7.20.0 and Node v.14.16.0
 
 To run app:
-1. Open 2 terminals (1 for web, 1 for server)
+1. Open 2 terminals (1 for server, 1 for web)
 2. In the first terminal: 
 ```
 cd tiny-wallst-server
@@ -12,7 +12,7 @@ npm start
 3. In the second terminal: 
 ```
 cd tiny-wallst-web
-npm run build
+npm run build // ensure that the backend server is running first
 npm start
 ```
 
