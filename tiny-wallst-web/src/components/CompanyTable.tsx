@@ -43,12 +43,18 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
             filter: "includes",
           },
           {
-            Header: "Last Price ($)",
+            Header: "Last Price",
             accessor: "last_known_price",
+            Cell: ({ value }: { value: string }) => (
+              <Box>${Number(value).toFixed(2)}</Box>
+            ),
           },
           {
             Header: "Volatility (last 90 days)",
-            accessor: "max_price_fluctuation",
+            accessor: "volatility",
+            Cell: ({ value }: { value: string }) => (
+              <Box>${Number(value).toFixed(2)}</Box>
+            ),
           },
           {
             Header: "Overall Score",
@@ -57,7 +63,7 @@ function CompanyTable({ data }: CompanyTableProps): JSX.Element {
             filter: "between",
           },
           {
-            Header: "Score",
+            Header: "Rating",
             accessor: "score",
             Cell: ({ value }: { value: Score }) => (
               <RadarChart

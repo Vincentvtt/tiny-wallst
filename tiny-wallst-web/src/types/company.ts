@@ -14,7 +14,7 @@ export interface Company {
   unique_symbol_slug: string;
   score: Score;
   last_known_price: number;
-  max_price_fluctuation: number;
+  volatility: number;
 }
 
 export default Company;

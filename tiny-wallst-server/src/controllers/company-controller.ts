@@ -1,51 +1,32 @@
-import * as dayjs from "dayjs";
 import { Context } from "koa";
-import { getRepository } from "typeorm";
 import { SwsCompany } from "../entities/SwsCompany";
-import { LAST_DATE_IN_DB } from "./../constants";
+import { getAllCompaniesWithPriceClosesAndScore } from "../services/company-service";
+import { getVolatility } from "../utils/volatility";
 
-interface CompanyWithPriceAndScore extends SwsCompany {
+interface CompanyWithPriceAndVolatility extends SwsCompany {
   last_known_price: number;
-  max_price_fluctuation: number;
+  volatility: number;
 }
 
-export async function getAllCompaniesWithPriceAndScore(
+export async function getAllCompaniesWithPriceAndVolatility(
   context: Context
-): Promise<CompanyWithPriceAndScore[]> {
-  const LAST_DATE = dayjs(LAST_DATE_IN_DB).format("YYYY-MM-DD");
-  const LAST_90_DAYS_DATE = dayjs(LAST_DATE_IN_DB)
-    .subtract(90, "day")
-    .format("YYYY-MM-DD");
+): Promise<CompanyWithPriceAndVolatility[]> {
+  const allCompaniesWithAllPriceClosesAndScore: SwsCompany[] =
+    await getAllCompaniesWithPriceClosesAndScore();
 
-  const allCompaniesWithAllPriceCloses: SwsCompany[] = await getRepository(SwsCompany)
-    .createQueryBuilder("swsCompany")
-    .leftJoinAndSelect("swsCompany.score", "score")
-    .leftJoinAndSelect("swsCompany.priceCloses", "priceCloses")
-    .where("priceCloses.date <= :last_date", { last_date: LAST_DATE })
-    .andWhere("priceCloses.date > :last_90_days_date", {
-      last_90_days_date: LAST_90_DAYS_DATE,
-    })
-    .orderBy("priceCloses.date", "DESC")
-    .getMany();
-
-  const allCompaniesWithPriceAndScore: CompanyWithPriceAndScore[] =
-    allCompaniesWithAllPriceCloses.map((company) => {
+  const allCompaniesWithPriceAndVolatility: CompanyWithPriceAndVolatility[] =
+    allCompaniesWithAllPriceClosesAndScore.map((company) => {
       const priceCloses = company.priceCloses;
       const lastKnownPrice = priceCloses[0].price;
-      const maxPrice = priceCloses.reduce((pc1, pc2) =>
-        pc1.price > pc2.price ? pc1 : pc2
-      ).price;
-      const minPrice = priceCloses.reduce((pc1, pc2) =>
-        pc1.price < pc2.price ? pc1 : pc2
-      ).price;
-      const maxPriceFluctuation = parseFloat((maxPrice - minPrice).toFixed(2));
+      const prices = priceCloses.map((pc) => pc.price);
+      const volatility = getVolatility(prices);
       delete company.priceCloses;
       return {
         ...company,
         last_known_price: lastKnownPrice,
-        max_price_fluctuation: maxPriceFluctuation,
+        volatility: volatility,
       };
     });
 
-  return (context.body = allCompaniesWithPriceAndScore);
+  return (context.body = allCompaniesWithPriceAndVolatility);
 }
