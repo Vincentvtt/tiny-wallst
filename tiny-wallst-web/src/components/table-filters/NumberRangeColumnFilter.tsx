@@ -14,7 +14,7 @@ export function NumberRangeColumnFilter({
   }, [id, preFilteredRows]);
 
   return (
-    <div
+    <span
       style={{
         display: "flex",
       }}
@@ -52,6 +52,6 @@ export function NumberRangeColumnFilter({
           marginLeft: "0.5rem",
         }}
       />
-    </div>
+    </span>
   );
 }

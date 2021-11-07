@@ -1,3 +1,5 @@
+// imported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-table
+
 import {
     UseColumnOrderInstanceProps,
     UseColumnOrderState,

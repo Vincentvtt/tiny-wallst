@@ -1,19 +1,19 @@
-import { Container } from "@chakra-ui/react";
 import React from "react";
 import http from "../api/http";
 import CompanyTable from "../components/CompanyTable";
-import { NavBar } from "../components/NavBar";
-import { HomeProps } from "../types/home-props";
+import { Layout } from "../components/Layout";
+import Company from "../types/company";
 
-const Home = ({ companies }: HomeProps) => {
+interface AppProps {
+  companies: Company[];
+}
+
+const Home = ({ companies }: AppProps) => {
   const data = React.useMemo(() => companies, [companies]);
   return (
-    <>
-      <NavBar />
-      <Container maxW="container.xl" vh={90} overflowX={"auto"}>
-        <CompanyTable data={data} />
-      </Container>
-    </>
+    <Layout>
+      <CompanyTable data={data} />
+    </Layout>
   );
 };
 
@@ -28,6 +28,7 @@ export async function getStaticProps() {
       },
     };
   } catch (err) {
+    console.error(err);
     return {
       notFound: true,
     };
